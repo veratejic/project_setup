@@ -1,12 +1,13 @@
 var express = require('express');
 var consolidate = require('consolidate');
 
+
 var app = express();
 
 // some dummy data
 var nikola = require('./../params.js');
 var nemanja = {
-    name: "Nemke22",
+    name: "Nemanja",
     age: 31,
     nationality: 'Serbian'
 };
@@ -43,16 +44,8 @@ app.get('/test', function (request, response) {
 });
 
 
-
-
-
-
-
-
+// proces.on()
 
 app.listen(8080, function () {
     console.log('server started');
 });
-
-
-
