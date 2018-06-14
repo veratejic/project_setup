@@ -1,6 +1,5 @@
-body {
-  color: white;
-  background-color: black;
-  font-family: Roboto;
-  font-size: 25px;
-}
+@import "variables";
+@import "basic";
+@import "swiper";
+@import "slides";
+@import "navbar";

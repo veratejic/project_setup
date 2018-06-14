@@ -4,18 +4,7 @@ var consolidate = require('consolidate');
 
 var app = express();
 
-// some dummy data
-var nikola = require('./../params.js');
-var nemanja = {
-    name: "Nemanja",
-    age: 31,
-    nationality: 'Serbian'
-};
-var vera = {
-    name: "Vera",
-    age: 25,
-    nationality: 'Serbian'
-};
+
 
 
 // set handlebars as default template engine for html extension
@@ -33,19 +22,14 @@ app.use(staticRouter);
 
 
 // handle GET Request at /test URL
-app.get('/test', function (request, response) {
+app.get('/', function (request, response) {
     // response.sendFile(__dirname + '/views/index.html');
-    response.render('index', {
-        nikola: nikola,
-        nemanja: nemanja,
-        vera: vera,
-        list: [1, 2, 3, 4, 5]
-    });
+    response.render('index', {});
 });
 
 
 // proces.on()
 
-app.listen(8080, function () {
+app.listen(5050, function () {
     console.log('server started');
 });
